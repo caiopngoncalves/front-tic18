@@ -1,0 +1,5 @@
+<div class="container" *ngIf="veiculo && veiculo">
+  <div class="propriedade" *ngFor="let propriedade of veiculo" (click)="getPropriedades(propriedade.valor)">
+    {{ propriedade.nome }}
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<div class="container" *ngIf="veiculos && veiculos.length > 0">
+  <div class="veiculo" *ngFor="let veiculo of veiculos" (click)="selecionarVeiculo(veiculo)">
+    {{ veiculo.Name }}
+  </div>
+</div>
