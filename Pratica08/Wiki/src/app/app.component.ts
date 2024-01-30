@@ -7,7 +7,7 @@ import { ApiService } from './api.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Wiki';
+  title = 'WikiAPI';
   constructor(public apiService: ApiService){}
   resultado:any;
   pesquisa="";

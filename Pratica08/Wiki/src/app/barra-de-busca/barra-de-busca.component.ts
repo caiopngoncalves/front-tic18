@@ -6,16 +6,16 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './barra-de-busca.component.css'
 })
 export class BarraDeBuscaComponent {
-  @Output() buscaFeita = new EventEmitter<string>();
-  busca = "";
+  @Output() SearchDone = new EventEmitter<string>();
+  Search = "";
 
-  getBusca(){
-    this.busca = (<HTMLInputElement>document.getElementById("txtBusca"))!.value || "";
-    this.pesquisado();
+  getSearch(){
+    this.Search = (<HTMLInputElement>document.getElementById("txtSearch"))!.value || "";
+    this.shearch();
   }
 
-  pesquisado(){
-    this.buscaFeita.emit(this.busca);
+  shearch(){
+    this.SearchDone.emit(this.Search);
   }
 
 }
