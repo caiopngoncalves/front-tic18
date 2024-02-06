@@ -1,0 +1,43 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: red;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 10%;
+  }
+  
+  li:hover {
+    background-color: #ddd;
+  }
+  
+  .no-veiculos {
+    color: #888;
+  }
+  div {
+    display: flex;
+    width: 10%;
+}
+
+.veiculo  {
+  display: flex;
+  width: 100%;
+  background-color: red;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+ .container  {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+} 

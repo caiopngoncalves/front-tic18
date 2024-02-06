@@ -1,0 +1,30 @@
+/* .categorias {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 10%;
+  }
+  
+  .categorias div {
+    padding: 10px;
+    margin: 5px;
+    
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .categorias div:hover {
+    background-color: #2980b9;
+  } */
+
+.categorias  {
+    display: flex;
+    width: 100%;
+    background-color: #3498db;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    justify-content: center;
+}

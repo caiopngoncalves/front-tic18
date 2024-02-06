@@ -1,0 +1,27 @@
+<button (click)="selecionarArquivo()">Selecionar Arquivo JSON</button>
+
+<div>
+  <app-classes
+    [categorias]="categorias"
+    (categoriaSelecionada)="onCategoriaSelecionada($event)"
+  ></app-classes>
+  
+  <app-objetos 
+    [veiculos]="veiculosSelecionados"
+    (veiculoSelecionado)="onVeiculoSelecionado($event)"
+  ></app-objetos>
+  
+  <app-propriedades [veiculo]="veiculoSelecionado"
+  (propiedadeSelecionada)="onPropriedadeSelecionada($event)"
+  ></app-propriedades>
+  
+  <app-valor-propriedade [valor]="valorPropriedade"
+  ></app-valor-propriedade>
+  <button (click)="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+</div>
+
+<div>
+    <ul class="carrinho-lista">
+      <li *ngFor="let veiculo of carrinho" class="carrinho-item">{{ veiculo.Name }}</li>
+    </ul>
+</div>
