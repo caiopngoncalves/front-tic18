@@ -1,0 +1,105 @@
+<div class="form-container">
+  <form id="formComum" (ngSubmit)="onSubmit(formulario)" #formulario="ngForm">
+    <!-- User Name -->
+    <label>
+      User Name:
+      <input 
+        name="username" 
+        ngModel
+        required
+        pattern="^\S{1,12}$"
+        #username="ngModel">
+    </label>
+
+    <!-- Password -->
+    <label>
+      Password:
+      <input 
+        type="password"
+        name="password" 
+        ngModel
+        required
+        pattern="(?=.*[A-Z])(?=.*[!@#$&*]).{4,}"
+        #password="ngModel">
+    </label>
+
+    <!-- Email -->
+    <label>
+      Email:
+      <input 
+        type="email"
+        name="email" 
+        ngModel
+        required
+        email
+        #email="ngModel">
+    </label>
+
+    <!-- Full Name -->
+    <label>
+      Full Name:
+      <input 
+        name="fullname" 
+        ngModel
+        required
+        pattern="^[a-zA-Z]+ [a-zA-Z]+$"
+        #fullname="ngModel">
+    </label>
+
+    <!-- Phone Number -->
+    <label>
+      Phone Number:
+      <input 
+        name="phone" 
+        ngModel
+        required
+        pattern="^\([1-9]{2}\) [2-9][0-9]{3,4}\-[0-9]{4}$"
+        #phone="ngModel">
+    </label>
+
+    <!-- Address -->
+    <label>
+      Address:
+      <input 
+        name="address" 
+        ngModel
+        required
+        #address="ngModel">
+    </label>
+
+    <!-- Birth Date -->
+    <label>
+      Birth Date:
+      <input 
+        type="date"
+        name="birthdate" 
+        ngModel
+        required
+        #birthdate="ngModel">
+    </label>
+
+    <!-- Gender -->
+    <label>
+      Gender:
+      <select name="gender" ngModel required #gender="ngModel">
+        <option value="">Select...</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <!-- Add more options as needed -->
+      </select>
+    </label>
+
+    <!-- Profession -->
+    <label>
+      Profession:
+      <select name="profession" ngModel required #profession="ngModel">
+        <option value="">Select...</option>
+        <option value="developer">Developer</option>
+        <option value="designer">Designer</option>
+        <!-- Add more options as needed -->
+      </select>
+    </label>
+
+    <button type="submit">Enviar</button>
+  </form>
+</div>
