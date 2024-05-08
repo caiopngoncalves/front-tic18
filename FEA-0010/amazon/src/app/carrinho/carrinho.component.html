@@ -1,0 +1,39 @@
+<div class="cart-container m-5">
+  <h2>Carrinho</h2>
+  <hr />
+
+  <div *ngFor="let item of carrinhoService.carrinhoSignal(); let i = index" class="cart-item row mb-2">
+
+    <div class="col-md-2" style="margin-left: 80px;">
+      <img [src]="item.imgURL" alt="{{ item.name }}" class="img-fluid" style="max-width: 80px;" />
+    </div>
+
+    <div class="col-md-7 d-flex flex-column justify-content-between">
+      <h4 class="h6 mb-1">{{ item.name }}</h4>
+
+      <div class="d-flex align-items-center">
+        <select class="form-select w-auto" aria-label="Quantidade" [(ngModel)]="item.quantity" (change)="adicionarItemQtyCarrinho(item)" style="font-size: 0.875rem;">
+            <option *ngFor="let q of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]" [ngValue]="q">{{ q }}</option>
+        </select>
+
+        <button (click)="removerItem(i)" class="btn btn-sm btn-danger mx-1" style="font-size: 0.875rem;">Excluir</button>
+      </div>
+    </div>
+
+    <div class="col-md-2 text-end">
+      <p class="fw-bold" style="font-size: 0.875rem;">R$ {{ item.price.toFixed(2) }}</p>
+      <p class="text-muted" style="font-size: 0.75rem;">à vista no Pix e boleto<br />ou em até 10x de R$ {{ (item.price / 10).toFixed(2) }} sem juros</p>
+    </div>
+  <hr class="my-2" />
+</div>
+
+
+  <div class="cart-subtotal row justify-content-end">
+    <div class="col-md-8 text-end">
+      <p>Total:</p>
+    </div>
+    <div class="col-md-4 text-right">
+      <p class="fw-bold">R$ {{ carrinhoService.subtotal().toFixed(2) }}</p>
+    </div>
+  </div>
+</div>

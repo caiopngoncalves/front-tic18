@@ -1,0 +1,14 @@
+<header>
+  <nav>
+    <a routerLink="/produtos" routerLinkActive="active">Produtos</a>
+    <a routerLink="/carrinho" routerLinkActive="active">
+
+      <span
+        class="position-absolute translate-middle badge rounded-pill bg-danger"
+        *ngIf="quantidadeComputed() > 0"
+        >{{ quantidadeComputed() }}</span
+      >
+      Carrinho
+    </a>
+  </nav>
+</header>
