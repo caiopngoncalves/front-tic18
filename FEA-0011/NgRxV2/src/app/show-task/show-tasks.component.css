@@ -1,0 +1,70 @@
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 50px;
+}
+
+.task-item {
+  padding: 15px;
+  margin: 15px 0;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.1em;
+  color: #333;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.task-item:hover {
+  background-color: #e6f7ff;
+  transform: translateY(-2px);
+}
+
+.task-item:active {
+  background-color: #cce7ff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
+
+.remove-button, .edit-button {
+  margin-left: 10px;
+  padding: 7px 15px;
+  font-size: 0.9em;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  outline: none;
+}
+
+.remove-button {
+  background-color: #ff4d4d;
+}
+
+.remove-button:hover {
+  background-color: #e60000;
+  transform: translateY(-2px);
+}
+
+.remove-button:active {
+  background-color: #b30000;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}
+
+.edit-button {
+  background-color: #4d79ff;
+}
+
+.edit-button:hover {
+  background-color: #005ce6;
+  transform: translateY(-2px);
+}
+
+.edit-button:active {
+  background-color: #0041b3;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(0);
+}

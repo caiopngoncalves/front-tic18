@@ -1,0 +1,11 @@
+<div class="modal-content">
+    <h2>Edit Task</h2>
+    <form (submit)="saveEdit()">
+        <label for="newDescription">New Description:</label>
+        <input type="text" id="newDescription" [(ngModel)]="newDescription" name="newDescription" required>
+        <div class="modal-buttons">
+            <button type="submit">Update</button>
+            <button type="button" mat-dialog-close>Cancel</button>
+        </div>
+    </form>
+</div>
